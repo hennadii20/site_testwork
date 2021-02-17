@@ -325,6 +325,8 @@
             /* DOWNLOAD SECTION*/
 
 .download__section {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     height: 350px;
     background-color: #f5f6f7;
@@ -357,6 +359,7 @@
 
 .download__links{
     display: flex;
+    flex-wrap: wrap;
     width: 70%;
     justify-content: center;
     margin: 0 auto;
@@ -366,9 +369,7 @@
     display: flex;
     width: 400px;
     height: 60px;
-    border: 1px solid black;
     margin-left: 50px;
-    
 }
 
 .apple__link {
@@ -393,10 +394,6 @@
     text-align: center;
 }
 
-.apple__link__image img {
-    padding: 0;
-    margin: 0;
-}
 
 @media (min-width:768px) and (max-width:991px){
     .header-wrapper{
@@ -742,6 +739,56 @@
     .submit-btn {
         width: 50px;
         height: 48px;
+    }
+
+    .download__section {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 450px;
+        background-color: #f5f6f7;
+        margin: 0;
+        padding: 20px 0;
+    }
+
+    .download__section__wrapper {
+        display: block;
+        width: 65%;
+        height: 250px;
+        margin: 0 auto;
+    }
+
+    .download__links{
+        display: flex;
+       flex-wrap: wrap;
+        width: 90%;
+        justify-content: center;
+        align-items:center;
+    }
+    
+    .apple__wrapper {
+        display: flex;
+        width: 250px;
+        height: 45px;
+        margin-left: 0;
+    }
+    
+    .apple__link__holder {
+        width: 250px;
+        background-color: #1ABC9c;
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-family: 'Roboto';
+        color: rgba(255, 255, 255, .9);
+        padding: 13px;
+    }
+    
+    .apple__link__image {
+        display: inline-block;
+        width: 45px;
+        background-color: #16A085;
+        padding: 14px;
+        text-align: center;
     }
     }
 

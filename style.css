@@ -754,7 +754,7 @@
     .download__section__wrapper {
         display: block;
         width: 65%;
-        height: 250px;
+        height: 320px;
         margin: 0 auto;
     }
 
@@ -762,7 +762,7 @@
         display: flex;
        flex-wrap: wrap;
         width: 90%;
-        justify-content: center;
+        justify-content:center;
         align-items:center;
     }
     
@@ -791,4 +791,3 @@
         text-align: center;
     }
     }
-

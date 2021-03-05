@@ -30,6 +30,7 @@
     letter-spacing: 0.1em;
     font-family: 'Roboto';
     color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
 }
 
 .menu-items-link {
@@ -38,7 +39,7 @@
 }
 
 .menu-items:hover {
-    font-size: 1.2em;
+    border-bottom: 1px solid #ffffff;
 }
 
 .menu-block {
@@ -394,6 +395,21 @@
     text-align: center;
 }
 
+        /* FOOTER*/
+
+.footer__text {
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+    line-height: 15px;
+    font-size: 15px;
+}
+
+.footer__text-copyright{
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+    line-height: 15px;
+    font-size: 12px;
+}
 
 @media (min-width:768px) and (max-width:991px){
     .header-wrapper{

@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <!-- <link href="font/Gotham_Rounded_Book.otf" rel="stylesheet"> -->
     <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="slick.css">
     <link rel="stylesheet" href="style.css">
     <title>Site</title>
 </head>
@@ -13,7 +15,7 @@
     <header class="header-wrapper">
         <div class="header-menu">
             <ul class="menu-list">
-                <li class="menu-items  menu-block"><a  class="menu-items-link" href="#">HOME</a></li>
+                <li class="menu-items  menu-block"><a  class="menu-items-link" href="">HOME</a></li>
                 <li class="menu-items  menu-block"><a class="menu-items-link" href="#photoapp">  PHOTOAPP</a></li>
                 <li class="menu-items   logo-item"><img  src="images/Livello 2.png" alt="logo"></li>
                 <li class="menu-items  menu-block"><a class="menu-items-link" href="#design">
@@ -21,11 +23,22 @@
                 <li class="menu-items  menu-block">
                        <a class="menu-items-link" href="#download">DOWNLOAD</a></li> 
                        <li class="navigation__item">
-                       <button class="navigation__btn-burger">
+                       <button class="navigation__btn-burger" id="dropdown-btn">
                            <span class="navigation__btn-burger--reader-only">menu</span>
                        </button>
                     </li>          
             </ul>
+            <div class="dropdown dropdown-close">
+                <ul class="dropdown-menu">
+                    
+                    <li><img class="burger-img" src="images/Livello 2.png" alt="logo"></li>
+                    <li><a class="dropdown_Item"  href="">HOME</a></li>
+                    <li><a class="dropdown_Item" href="#photoapp">PHOTOAPP</a></li>
+                    <li><a class="dropdown_Item" href="#design">DESIGN</a></li>
+                    <li><a class="dropdown_Item" href="#download">DOWNLOAD</a></li>
+                </ul>
+            </div>
+        
         </div>
         <div class="header-center-block">
             <h1 class="header-title">YOUR LIFE , A PHOTO</h1>
@@ -49,7 +62,15 @@
     </section>
 
     <section class="design__wrapper" id="design">
-        <img class="phone__photo" src="images/Flat iPhone 5C Mock Up.png" alt="">
+        <div class="design__slider">
+            <div class="design__slider-line">
+        <img class="phone__photo" src="images/apple-1.jpeg" alt="">
+        <img class="phone__photo" src="images/apple-2.jpeg" alt="">
+        <img class="phone__photo" src="images/apple-3.jpeg" alt="">
+        <img class="phone__photo" src="images/apple-4.jpeg" alt="">
+        <img class="phone__photo" src="images/apple-5.jpeg" alt="">
+    </div>
+        </div>
         <div class="design__section">
             <h2 class="design__section-title">DESIGN</h2>
             <p class="design__section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -59,20 +80,32 @@
 
             <div class="button__group">
                 <span class="button__group-num"><p class="design__numbers">01/05</p></span>
-                <button class="left-btn"><img src="images/fa-angle-left.svg" alt="button"></button>
-                <button class="right-btn"><img src="images/fa-angle-right.svg" alt="button"></button>
+                <button class="left-btn  slider-next" ><img src="images/fa-angle-left.svg" alt="button"></button>
+                <button class="right-btn  slider-prev"><img src="images/fa-angle-right.svg" alt="button"></button>
             </div>
         </div>
     </section>
 
-    <section class="section__comunity">          
-        <div class="our__comunity">
+    <section class="section__comunity "> 
+        <div class="our__comunity slider-img">
             <img src="images/Livello 4.png" alt="logo">
             <h2 class="our__comunity-title">OUR COMMUNITY</h2>
              <p class="our__comunity-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+        </div> 
+        <div class="our__comunity-slider-wrapper">
+            <div class="our__comunity-slider">
+                <img src="images/Livello 5_300.png" alt="picture">
+                <img src="images/Livello 6_300.png" alt="picture">
+            </div>
+                <div class="comunity__button__group">
+                    <button class="left-btn slick-arrow next">
+                        <img src="images/fa-angle-left.svg" alt="button">
+                    </button>
+                    <button class="right-btn slick-arrow prev">
+                        <img src="images/fa-angle-right.svg" alt="button">
+                    </button>
+                </div>
         </div>
-        <img  class="our__comunity-section" src="images/Livello 5.png" alt="photo_car">
-        <img  class="our__comunity-section" src="images/Livello 6.png" alt="nature">        
     </section>
 
     <section class="subscription">
@@ -80,9 +113,17 @@
             <h2 class="subscription__title">SUBSCRIBE TO US COMMUNITY</h2>
         <form action="#">
             <input class="subscription_input" type="email" id="email" name="email" placeholder="Enter your email">
-            <button class="submit-btn" type="submit"><img src="images/fa-check.svg" alt="button"> </button> 
+            <button class="submit-btn"  id="submit-btn" type="button"><img src="images/fa-check.svg" alt="button"> </button> 
             </form>
         </div>
+        <div id="modalWindow" class="modal">    
+            <div class="modal-content">
+            <span class="close">&times;</span>
+            <p class="modal-text">This site currently is out of service.    <br> Please, try later.</p>
+            </div>
+        </div>
+
+       
     </section>
 
     <section class="download__section" id="download">
@@ -90,7 +131,7 @@
         <div class="download__section__wrapper">
             <h2 class="download__section-title">DOWNLOAD IT</h2>
             <p class="download__section-text"> LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.</p>
-        </div>
+        </div>                          
 
         <div class="download__links">
         <div class="download__links__wrapper">
@@ -120,12 +161,24 @@
     
 
     </section>
+<footer>
+    <div class="footer__section">
+        <div class="footer__text-wrapper">
+            <p class="footer__text"><a class="footer-link" href="#">CREDITS</a> |<a class="footer-link" href="#">PRIVACY</a> |<a class="footer-link" href="#">OUR TEAMS</a></p>
+            <p  class="footer__text-copyright">Copyright by phototime - all right reserved</p>
+        </div>
 
-    <footer class="footer__section">
-        <p class="footer__text">CREDITS | PRIVACY | OUR TEAMS</p>
-        <p  class="footer__text-copyright">Copyright by phototime - all right reserved</p>
-    </footer>
+        <div class="footer__logo">
+            <img class="footer__logo-img" src="images/Livello 4.png">
+        </div>
+        
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+  
+    <script src="slick.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

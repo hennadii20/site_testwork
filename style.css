@@ -1,3 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Gotham Rounded Book"; 
+    src: url(font/Gotham_Rounded_Book.otf);
+   }
 
 .header-wrapper{
     width: 100%;
@@ -11,7 +19,7 @@
 }
 
 .header-menu {
-    padding-top: 50px;
+    padding-top: 30px;
 }
 
 .menu-list {
@@ -28,7 +36,7 @@
     display: inline-block;
     font-size: 1em;
     letter-spacing: 0.1em;
-    font-family: 'Roboto';
+    font-family: 'Gotham Rounded Book';
     color: #ffffff;
     border-bottom: 1px solid rgba(255, 255, 255, 0);
 }
@@ -38,7 +46,7 @@
     text-decoration: none;
 }
 
-.menu-items:hover {
+.menu-block:hover {
     border-bottom: 1px solid #ffffff;
 }
 
@@ -73,6 +81,43 @@
     background-color: #ffffff;
 }
 
+.navigation__item{
+    position: absolute;
+}
+
+.dropdown-close{
+    display: none;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.dropdown-menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.burger-img{
+    margin-top: -10px;
+}
+
+.dropdown-menu li{
+    margin-bottom: 5px;
+}
+
+.dropdown_Item{
+    font-size: 18px;
+    font-family: 'Gotham Rounded Book';
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown_Item:hover{
+    border-bottom: 1px solid #ffffff;
+}
+
 .header-center-block {
     display: flex;
     flex-direction: column;
@@ -81,7 +126,7 @@
 }
 
 .header-title {
-    font-family: 'Roboto';
+    font-family: 'Gotham Rounded Book';
     font-size: 30px;
     letter-spacing: 5.5px;
     color: #ffffff;
@@ -90,7 +135,7 @@
 }
 
 .header-text {
-    font-family: 'Roboto';
+    font-family: 'Gotham Rounded Book';
     font-size: 16px;
     letter-spacing: 2.5px;
     color: #ffffff;
@@ -106,7 +151,7 @@
     border: 1px solid #16a085;
     border-radius: 5px;
     font-size: 17px;
-    font-family: 'Roboto';
+    font-family: 'Gotham Rounded Book';
     letter-spacing: 1.5px;
     margin-top: 30px;
 }
@@ -142,14 +187,14 @@
 }
         
 .represent__title {
-    font-family: 'Roboto';
+    font-family: 'Gotham Rounded Book';
     font-size: 18px;
     line-height: 25px;
     letter-spacing: 3px;
 }
         
 .represent__text{
-    font-family: 'Roboto';
+    font-family: 'Gotham Rounded Book';
     font-size: 12px;
     letter-spacing: 2.5px;
     line-height: 25px;
@@ -164,7 +209,7 @@
     border: 1px solid #16a085;
     border-radius: 5px;
     font-size: 17px;
-    font-family: 'Roboto';
+    font-family: 'Gotham Rounded Book';
     letter-spacing: 1.5px;
     margin-top: 30px;
 }
@@ -180,9 +225,24 @@
     margin-left: 90px;
 }
 
+.design__slider{
+    width: 315px;
+    height: 480px;  
+    margin-left: 0;
+    overflow: hidden;
+}
+
+.design__slider-line{
+    display: flex;
+    width: 315px;
+    height: 480px;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+}
 .phone__photo {
-    width: 250px;
-    height: auto;
+    width: 315px;
+    height: 480px;
 }
 
 .design__section {
@@ -192,14 +252,14 @@
 }
 
 .design__section-title{
-    font-family: 'Roboto';
+    font-family: 'Gotham Rounded Book';
     font-size: 18px;
     line-height: 25px;
     letter-spacing: 3px;
 }
 
 .design__section-text {
-    font-family: 'Roboto';
+    font-family: 'Gotham Rounded Book';
     font-size: 12px;
     letter-spacing: 2.5px;
     line-height: 25px;
@@ -214,7 +274,7 @@
     border: 1px solid #16a085;
     border-radius: 5px;
     font-size: 17px;
-    font-family: 'Roboto';
+    font-family: 'Gotham Rounded Book';
     letter-spacing: 1.5px;
     margin-top: 30px;
 }
@@ -241,7 +301,7 @@
     justify-content: center;
     align-items: center;
     margin: 50px auto 0;
-    padding: 100px 0;
+    padding: 40px 0;
     background-color: #f5f6f7;
 }
 
@@ -249,34 +309,58 @@
     width: 370px;
     height: 240px;
     text-align: center;
-}
-    
-.our__comunity-section {
-
-    display: block;
-    margin-left: 40px;
+    padding-top: 20px;
 }
 
 .our__comunity-title {
-    font-family: 'Roboto';
+    font-family: 'Gotham Rounded Book';
     font-size: 18px;
     line-height: 25px;
     letter-spacing: 3px;
 }
 
 .our__comunity-text {
-    font-family: 'Roboto';
+    font-family: 'Gotham Rounded Book';
     font-size: 12px;
     letter-spacing: 2.5px;
     line-height: 25px;
 }
 
-.our__comunity-btn {
-    width: 200px;
-    position: relative;
-    bottom: 150px;
-    right: 60px;
+.our__comunity-slider-wrapper{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    align-items: flex-end;
 }
+
+.our__comunity-slider {
+    width: 100%;
+    margin-left: 20px;
+}
+
+.comunity__button__group{
+    display: flex;
+    margin: 5px 7px;
+    padding: 0;
+    float: right;  
+    order:-1;   
+}
+
+.left-btn img{
+    margin: 0;
+    padding: 0;
+}
+
+.right-btn img{
+    margin: 0;
+    padding: 0;
+}
+
+.our__comunity-slider img{
+    margin: 0 10px 0;
+    width: 370px;
+    height: 250px;  
+} 
 
                  /*  subscription  */
 
@@ -291,7 +375,7 @@
 }
 
 .subscription__title {
-    font-family: 'Roboto';
+    font-family: 'Gotham Rounded Book';
     font-size: 18px;
     line-height: 25px;
     letter-spacing: 3px;
@@ -323,22 +407,85 @@
     padding: 0;
 }
 
+.toggleWindow{
+    display: none;
+}
+
+.modalWindow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(141, 182, 183, .6);
+}
+
+.openModal{
+    display: block;
+}
+
+   /* Modal */
+
+   .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+      
+.modal-content {
+    width: 50%;
+    height: 50%;
+    background-color: #eadbdb;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid rgb(135, 135, 135);
+    border-radius: 15px;
+}
+      
+.modal-text{
+    font-size: 40px;
+    font-family: 'Gotham Rounded Book';
+    text-align: center;
+    padding-top: 30px;
+}
+
+.close {
+    color: #625353;
+    float: right;
+    font-size: 48px;
+    font-weight: bold;
+}
+      
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
             /* DOWNLOAD SECTION*/
 
 .download__section {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 350px;
+    height: 300px;
     background-color: #f5f6f7;
     margin: 0;
-    padding: 90px 0;
+    
+    
 }
 
 .download__section-title,
 .download__section-text {
     text-align: center;
-    font-family: 'Roboto';
+    font-family: 'Gotham Rounded Book';
     letter-spacing: 2px;
     line-height: 25px;
 }
@@ -354,16 +501,18 @@
 .download__section__wrapper {
     display: block;
     width: 65%;
-    height: 200px;
-    margin: 0 auto;
+    height: 150px;
+    margin: 20px auto;
 }
 
 .download__links{
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
+    width: 100%;
     justify-content: center;
     margin: 0 auto;
+    margin-top: -50px;
+    padding: 0;
 }
 
 .apple__wrapper {
@@ -371,6 +520,7 @@
     width: 400px;
     height: 60px;
     margin-left: 50px;
+
 }
 
 .apple__link {
@@ -382,7 +532,7 @@
     background-color: #1ABC9c;
     font-size: 22px;
     letter-spacing: 3px;
-    font-family: 'Roboto';
+    font-family: 'Gotham Rounded Book';
     color: rgba(255, 255, 255, .9);
     padding: 17px;
 }
@@ -397,18 +547,41 @@
 
         /* FOOTER*/
 
+.footer__section{
+    display: flex;
+    width: 85%;
+    margin: 30px auto;
+}
+
+.footer__text-wrapper{
+    width: 80%;
+}
+
+.footer__logo{
+    width: 20%;
+}
+
 .footer__text {
-    font-family: 'Roboto';
+    font-family: 'Gotham Rounded Book';
     letter-spacing: 2px;
     line-height: 15px;
-    font-size: 15px;
+    font-size: 14px;
+}
+
+.footer-link{
+    text-decoration: none;
+    color: black;
 }
 
 .footer__text-copyright{
-    font-family: 'Roboto';
+    font-family: 'Gotham Rounded Book';
     letter-spacing: 2px;
     line-height: 15px;
     font-size: 12px;
+}
+
+.footer__logo-img{
+    float:right;
 }
 
 @media (min-width:768px) and (max-width:991px){
@@ -422,14 +595,14 @@
     }
     
     .represent__title {
-        font-family: 'Roboto';
+        font-family: 'Gotham Rounded Book';
         font-size: 16px;
         line-height: 20px;
         letter-spacing: 3px;
     }
     
     .represent__text{
-        font-family: 'Roboto';
+        font-family: 'Gotham Rounded Book';
         font-size: 12px;
         letter-spacing: 2.5px;
         line-height: 20px;
@@ -471,16 +644,32 @@
     }
 
     .section__comunity {
-        width: 400px;
+        width: 100%;
         margin: 10px auto;
     }
     
-    .our__comunity-section{
-        margin: 10px auto;
+    .our__comunity{
+        height: 200px;
     }
+
+   .our__comunity-slider-wrapper{
+       width: 80%;
+   }
 
     .right-btn {
         margin-left: 10px;
+    }
+
+    .subscription {
+        height: 490px;
+    }
+
+    .subscription__place{
+        margin-top: 100px;
+    }
+
+    .apple__wrapper{
+        width: 320px;
     }
     }
         
@@ -490,28 +679,60 @@
         height: 400px;
     }    
     
-    .header-title {
-         margin-top: 50px;
-    }
-    
     .menu-block{
         display: none;
+    }
+
+    .navigation__item{
+        position: static;
     }
         
     .navigation__btn-burger {
         display: block;
     }
 
-    .menu-list {
-        width: 80%;
-        justify-content:space-between;
-        align-items:center;
-    } 
+    .dropdown-close{
+        display: block; 
+        position: absolute;
+        top: 70px;
+    }
+
+    .dropdown-menu{
+        display:none;
+    }
+
+.dropdown-menu {
+    width: 100%;
+    height: 400px;
+    background-color: #3b2433;
+    text-align: center;
+    margin-top: -90px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    z-index: 5;
+}
+
+.dropdown-menu li{
+    height: 70px;
+    padding-top: 45px;
+    font-family: 'Gotham Rounded Book';
+}
+
+.show{
+    display: block;
+}
+
+.menu-list {
+    width: 80%;
+    justify-content:space-between;
+    align-items:center;
+} 
 
 .header-title {
-    font-size: 20px;
+    font-size: 15px;
     letter-spacing: 4px;
-    margin-top: 65px;
+    margin-top: 75px;
 }
 
 .header-btn {
@@ -554,14 +775,14 @@
     
     .design__wrapper {
         display: flex;
-    flex-direction: column;
+        flex-direction: column;
         width: 100%;
         align-items: center;
         margin: 0;
     }
         
     .phone__photo {
-        width: 250px;
+        width: 315px;
         height: auto;
         margin-top: 20px;
     }
@@ -593,7 +814,7 @@
     }
         
     .button__group {
-         width: 80px;
+        width: 80px;
         margin: 0 auto;
     }
     
@@ -604,98 +825,170 @@
     .our__comunity-section{
         margin: 10px auto;
     }
-    }
-        
-            
-    @media (max-width:575px){
-            
-    .header-menu {
-        padding-top: 30px;
-    }
-        
-    .navigation__btn-burger {
-        display: block;
-    }
 
-    .menu-list {
+    .our__comunity-slider-wrapper{
         width: 80%;
-        justify-content:space-between;
-        align-items:center;
     }
 
+    .download__section{
+        height: 450px;
+    }
+
+    .subscription__place{
+        margin-top: 0px;
+    }
+
+    .modal-text{
+        font-size: 30px;
+        padding-top: 40px;
+    }
+    
+    .modal-content {
+        width: 90%;
+        height: 90%;
+        border: 1px solid rgb(135, 135, 135);
+        border-radius: 15px;
+    }
+        
+
+    .download__links{
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: -50px;
+        padding: 0;
+    }
+
+    .apple__wrapper{
+        margin-left: 0;
+    }
+    }
+        
+            
+@media (max-width:575px){
+            
+.header-menu {
+    padding-top: 30px;
+}
+
+.navigation__item{
+    position: static;
+}
+        
+.navigation__btn-burger {
+    display: block;
+}
+
+.dropdown-close{
+    display: block;
+    position: absolute;
+    margin-top: 0px;
+}
+
+.dropdown-menu {
+    display:none;
+    width: 100%;
+    height: 400px;
+    background-color: #3b2433;
+    text-align: center;
+    margin-top: -90px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    position: absolute;
+    z-index: 5;
+}
+
+
+.dropdown-menu li{
+    height: 70px;
+    padding-top: 5px;
+    font-family: 'Gotham Rounded Book';
+}
+
+.show{
+    display: block;
+}
+
+.menu-list {
+    width: 80%;
+    justify-content:space-between;
+    align-items:center;
+}
 
 .header-wrapper{
-        height: 400px;
-    }
+    height: 400px;
+}
     
-    .represent_section {
-        width: 100%;
-         height: 250px;
-    }
+.represent_section {
+    width: 100%;
+    height: 250px;
+}
             
-    .menu-block{
-        display: none;
-    }
+.menu-block{
+    display: none;
+}
                 
-           
-    .header-title {
-         font-size: 20px;
-        letter-spacing: 4px;
-        margin-top: 70px;
-    }
+.header-title {
+    font-size: 15px;
+    letter-spacing: 4px;
+    margin-top: 80px;
+}
                 
-    .header-btn {
-        width: 140px;
-        height: 40px;
-        font-size: 13px;
-        letter-spacing: 1.2px;
-    }
+.header-btn {
+    width: 140px;
+    height: 40px;
+    font-size: 13px;
+    letter-spacing: 1.2px;
+}
     
-    .represent__info {
-        width: 60%;
-         margin-left: 30px;
-        padding-top: 10px;
-    }
+.represent__info {
+    width: 60%;
+    margin-left: 30px;
+    padding-top: 10px;
+}
     
-    .represent__title {
-        font-size: 12px;
-        line-height: 20px;
-        letter-spacing: 2px;
-    }
+.represent__title {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
         
-    .represent__text{
-        font-size: 9px;
-        letter-spacing: 1px;
-        line-height: 15px;
-        padding-top: 5px;
-    }
+.represent__text{
+    font-size: 9px;
+    letter-spacing: 1px;
+    line-height: 15px;
+    padding-top: 5px;
+}
         
-    .represent-btn {
-         width: 150px;
-        height: 45px;
-        color: white;
-        background-color: #16a085;
-        border:1px solid white;
-        font-size: 15px;
-        letter-spacing: 1px;
-        margin-top: 10px;
-    }
+.represent-btn {
+    width: 150px;
+    height: 45px;
+    color: white;
+    background-color: #16a085;
+    border:1px solid white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
     
-    .design__wrapper {
-        display: flex;
-        flex-direction: column;
-         width: 100%;
-        align-items: center;
-        margin: 0;
-    }
+.design__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+}
         
-    .phone__photo {
-        width: 250px;
-        height: auto;
-        margin-top: 20px;
-    }
+.phone__photo {
+    width: 315px;
+    height: auto;
+    margin-top: 20px;
+}
         
-    .design__section {
+.design__section {
         width: 80%;
         margin: 0;
         padding: 0;
@@ -732,6 +1025,25 @@
 
     .our__comunity-section{
         margin: 10px auto;
+    }
+
+    .section__comunity{
+        margin:  20px auto 0;
+    }
+
+    .our__comunity-slider-wrapper{
+        width: 85%;
+    }
+
+    .our__comunity-slider img{
+        margin: 0 10px 0;
+        width: 350px;
+        height: 200px;  
+    } 
+
+    .comunity__button__group{
+        order: 1;
+        margin: 20px auto;
     }
 
     .subscription {
@@ -740,7 +1052,7 @@
     }
 
     .subscription__title {
-        font-family: 'Roboto';
+        font-family: 'Gotham Rounded Book';
         font-size: 14px;
         line-height: 15px;
         letter-spacing: 1.5px;
@@ -751,6 +1063,19 @@
         width: 250px;
         height: 40px;
     }
+
+          
+.modal-text{
+    font-size: 20px;
+    padding-top: 50px;
+}
+
+.modal-content {
+    width: 90%;
+    height: 90%;
+    border: 1px solid rgb(135, 135, 135);
+    border-radius: 15px;
+}
     
     .submit-btn {
         width: 50px;
@@ -769,17 +1094,16 @@
 
     .download__section__wrapper {
         display: block;
-        width: 65%;
-        height: 320px;
+        width: 90%;
+        height: 250px;
         margin: 0 auto;
     }
 
     .download__links{
         display: flex;
        flex-wrap: wrap;
-        width: 90%;
-        justify-content:center;
-        align-items:center;
+        width: 70%;
+        
     }
     
     .apple__wrapper {
@@ -787,6 +1111,7 @@
         width: 250px;
         height: 45px;
         margin-left: 0;
+        margin-bottom: 10px;
     }
     
     .apple__link__holder {
@@ -794,7 +1119,7 @@
         background-color: #1ABC9c;
         font-size: 18px;
         letter-spacing: 1px;
-        font-family: 'Roboto';
+        font-family: 'Gotham Rounded Book';
         color: rgba(255, 255, 255, .9);
         padding: 13px;
     }
@@ -806,4 +1131,23 @@
         padding: 14px;
         text-align: center;
     }
+
+    .footer__section{
+        flex-direction: column;
+        align-items: center;
     }
+
+    .footer__logo{
+        order: -1;
+    }
+
+    .footer__text-wrapper{
+        margin-top: 20px;
+    }
+
+    .footer__text-wrapper{
+        text-align: center;
+    }
+    }
+
+ 

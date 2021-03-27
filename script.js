@@ -22,40 +22,53 @@ document.querySelector(".slider-next").addEventListener('click', function (){
 
 //             Second slider
 
-$(document).ready(function () {
-    $(".our__comunity-slider").slick({
-        lazyLoad: 'ondemand',
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        centerMode: true,
-        centerPadding: '0px',
-        swipeToSlide: true,
-        prevArrow: $('.prev'),
-        nextArrow: $('.next'),
-        focusOnSelect: true,
-        infinite: true,
-        speed: 1000,
-        responsive: [
-             	    {
-             	      breakpoint: 768,
-            	      settings: {
-            	        slidesToShow: 1,
-             	      }
-                     },
-        ]
-    });
-});
+function addImagesToSlider(imgList) {
+    imgList.forEach((item) => {
+        var imgList = "";
+        imgList += `<img class="gallery__img" src="${item.previewURL}" alt="Picture">`;
+        $('.our__comunity-slider').append(imgList);
+    })
+}
 
-const url = `https://pixabay.com/api/?key=20707927-2d1a05c8f3ed1bf9bb924584c&q=car`;
+function controlSlider() {
+    const url = `https://pixabay.com/api/?key=20707927-2d1a05c8f3ed1bf9bb924584c&q=car`;
 
-$.getJSON(url, function (json) {
-    var imgList = "";
-    $.each(json.hits, function () {
-    imgList += '<img  src= "' + this.previewURL + '">';
-    });
-    $('.our__comunity-slider').slick('slickAdd', imgList);
-    console.log(imgList);
-});
+    fetch(url)
+        .then((response) => {
+            let myresult = response.json()
+            return myresult;
+        })
+        .then((result) => {
+            addImagesToSlider(result.hits);
+            console.log(result.hits);
+            $(".our__comunity-slider").slick({
+                        lazyLoad: 'ondemand',
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                        centerPadding: '0px',
+                        swipeToSlide: true,
+                        prevArrow: $('.prev'),
+                        nextArrow: $('.next'),
+                        focusOnSelect: true,
+                        infinite: true,
+                        speed: 1000,
+                        responsive: [
+                            {
+                             	breakpoint: 768,
+                            	settings: {
+                            	slidesToShow: 1,
+                                }
+                            },
+                        ]
+                    });
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+}
+
+controlSlider();
 
 //              Toggle menu
 

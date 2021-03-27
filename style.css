@@ -671,6 +671,11 @@
     .apple__wrapper{
         width: 320px;
     }
+
+.download__section__wrapper{
+    height: 200px;
+}
+
     }
         
     @media (min-width:576px) and (max-width:767px){
@@ -827,7 +832,7 @@
     }
 
     .our__comunity-slider-wrapper{
-        width: 80%;
+        width: 60%;
     }
 
     .download__section{
@@ -860,6 +865,10 @@
         margin-top: -50px;
         padding: 0;
     }
+
+.download__section__wrapper{
+    height: 180px;
+}
 
     .apple__wrapper{
         margin-left: 0;
